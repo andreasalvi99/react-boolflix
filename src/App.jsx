@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
-import FilmCard from "./components/filmCard";
+import FilmCard from "./components/FilmCard";
+import DramaCard from "./components/DramaCard";
 
 export default function App() {
   const [searchInput, setSearchInput] = useState(""); //^ Controllo valore di ricerca per nome
@@ -73,33 +74,14 @@ export default function App() {
         <ul>
           {searchedDramas.map((searchedDrama) => {
             return (
-              <>
-                <li key={searchedDrama.id}>
-                  <span className="fw-bold">Titolo: </span>
-                  {searchedDrama.name}
-                </li>
-                <li>
-                  <span className="fw-bold">Titolo Originale: </span>
-                  {searchedDrama.original_name}
-                </li>
-                <li>
-                  {searchedDrama.original_language === "en" ? (
-                    <img src="src\assets\img\regno-unito.jpg" />
-                  ) : searchedDrama.original_language === "it" ? (
-                    <img src="src\assets\img\Flag_of_Italy.svg.webp" />
-                  ) : (
-                    <>
-                      <span className="fw-bold">Lingua: </span>
-                      {searchedDrama.original_language}
-                    </>
-                  )}
-                </li>
-                <li>
-                  <span className="fw-bold">Voto: </span>
-                  {searchedDrama.vote_average}
-                </li>
-                <hr />
-              </>
+              <DramaCard
+                key={searchedDrama.id}
+                id={searchedDrama.id}
+                name={searchedDrama.name}
+                original_name={searchedDrama.original_name}
+                language={searchedDrama.original_language}
+                rating={searchedDrama.vote_average}
+              />
             );
           })}
         </ul>
