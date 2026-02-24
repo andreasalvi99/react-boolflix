@@ -7,6 +7,24 @@ export default function DramaCard({
 }) {
   return (
     <>
+      <div className="col">
+        <div className="card text-bg-dark">
+          <img
+            src={`https://image.tmdb.org/t/p/original/${img}`}
+            className="card-img"
+            alt="..."
+          />
+          <div className="card-img-overlay">
+            <h5 className="card-title">{name}</h5>
+            <h5 className="card-title">{original_name}</h5>
+            <p className="card-text">
+              <span className="fw-bold">Voto: </span>
+              {(rating * 0.5).toFixed(1)}
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* <>
       <li className="list-group-item">
         <span className="fw-bold">Titolo: </span>
         {name}
@@ -40,6 +58,7 @@ export default function DramaCard({
         {(rating * 0.5).toFixed(1)}
       </li>
       <hr />
+    </> */}
     </>
   );
 }

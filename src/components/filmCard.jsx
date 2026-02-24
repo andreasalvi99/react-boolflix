@@ -6,20 +6,22 @@ export default function FilmCard({
   img,
 }) {
   return (
-    <div className="col">
-      <div className="card text-bg-dark">
-        <img
-          src={`https://image.tmdb.org/t/p/original/${img}`}
-          className="card-img"
-          alt="..."
-        />
-        <div className="card-img-overlay">
-          <h5 className="card-title">{title}</h5>
-          <h5 className="card-title">{original_title}</h5>
-          <p className="card-text">
-            <span className="fw-bold">Voto: </span>
-            {(rating * 0.5).toFixed(1)}
-          </p>
+    <>
+      <div className="col">
+        <div className="card text-bg-dark">
+          <img
+            src={`https://image.tmdb.org/t/p/original/${img}`}
+            className="card-img"
+            alt="..."
+          />
+          <div className="card-img-overlay">
+            <h5 className="card-title">{title}</h5>
+            <h5 className="card-title">{original_title}</h5>
+            <p className="card-text">
+              <span className="fw-bold">Voto: </span>
+              {(rating * 0.5).toFixed(1)}
+            </p>
+          </div>
         </div>
       </div>
       {/* <div className="card">
@@ -35,14 +37,14 @@ export default function FilmCard({
         </p>
       </div>
     </div> */}
-    </div>
-    // <>
+      {/* </div> */}
+      {/* // <>
     //   <li className="list-group-item">
     //     <span className="fw-bold">Titolo: </span>
     //     {title}
     //   </li>
-    //   {img && (
-    //     <li>
+    //   {img && ( */}
+      {/* //     <li>
     //       <img src={`https://image.tmdb.org/t/p/original/${img}`} alt={title} />
     //     </li>
     //   )}
@@ -51,11 +53,11 @@ export default function FilmCard({
     //     {original_title}
     //   </li>
     //   <li className="list-group-item">
-    //     {language === "en" ? (
-    //       <img src="src\assets\img\regno-unito.jpg" className="country-img" />
+    //     {language === "en" ? ( */}
+      {/* //       <img src="src\assets\img\regno-unito.jpg" className="country-img" />
     //     ) : language === "it" ? (
-    //       <img
-    //         src="src\assets\img\Flag_of_Italy.svg.webp"
+    //       <img */}
+      {/* //         src="src\assets\img\Flag_of_Italy.svg.webp"
     //         className="country-img"
     //       />
     //     ) : (
@@ -64,12 +66,13 @@ export default function FilmCard({
     //         {language}
     //       </>
     //     )}
-    //   </li>
-    //   <li className="list-group-item">
+    //   </li> */}
+      {/* //   <li className="list-group-item">
     //     <span className="fw-bold">Voto: </span>
     //     {(rating * 0.5).toFixed(1)}
     //   </li>
     //   <hr />
-    // </>
+    // </> */}
+    </>
   );
 }

@@ -85,7 +85,20 @@ export default function App() {
             })}
           </ul> */}
           <h2>TV</h2>
-          <ul className="list-group text-start">
+          <div className="row row-cols-4 g-3">
+            {searchedDramas.map((searchedDrama) => {
+              return (
+                <DramaCard
+                  img={searchedDrama.poster_path}
+                  key={searchedDrama.id}
+                  name={searchedDrama.name}
+                  original_name={searchedDrama.original_name}
+                  rating={searchedDrama.vote_average}
+                />
+              );
+            })}
+          </div>
+          {/* <ul className="list-group text-start">
             {searchedDramas.map((searchedDrama) => {
               return (
                 <DramaCard
@@ -99,7 +112,7 @@ export default function App() {
                 />
               );
             })}
-          </ul>
+          </ul> */}
         </div>
       </section>
     </>
