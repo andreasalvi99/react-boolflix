@@ -14,7 +14,7 @@ export default function App() {
       e.preventDefault(), //^ Funzione per prevenire il refresh ed effettuare chiamata all'invio del form
       axios
         .get(
-          "https://api.themoviedb.org/3/search/movie?api_key=a23cfdf36a93b9f03e4cca29c2df220a&query=x-men&language=it-IT",
+          `https://api.themoviedb.org/3/search/movie?api_key=a23cfdf36a93b9f03e4cca29c2df220a&query=${searchInput}&language=it-IT`,
         )
         .then((response) => {
           setSearchedFilms(response.data.results);
