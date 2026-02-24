@@ -56,7 +56,20 @@ export default function App() {
           </form>
 
           <h2>Films</h2>
-          <ul className="list-group text-start">
+          <div className="row row-cols-4 g-3">
+            {searchedFilms.map((searchedFilm) => {
+              return (
+                <FilmCard
+                  img={searchedFilm.poster_path}
+                  key={searchedFilm.id}
+                  title={searchedFilm.title}
+                  original_title={searchedFilm.original_title}
+                  rating={searchedFilm.vote_average}
+                />
+              );
+            })}
+          </div>
+          {/* <ul className="list-group text-start">
             {searchedFilms.map((searchedFilm) => {
               return (
                 <FilmCard
@@ -70,7 +83,7 @@ export default function App() {
                 />
               );
             })}
-          </ul>
+          </ul> */}
           <h2>TV</h2>
           <ul className="list-group text-start">
             {searchedDramas.map((searchedDrama) => {
