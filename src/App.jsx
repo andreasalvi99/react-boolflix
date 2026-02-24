@@ -11,7 +11,7 @@ export default function App() {
 
   function handleSubmitAndFetchFilms(e) {
     return (
-      e.preventDefault(),
+      e.preventDefault(), //^ Funzione per prevenire il refresh ed effettuare chiamata all'invio del form
       axios
         .get(
           "https://api.themoviedb.org/3/search/movie?api_key=a23cfdf36a93b9f03e4cca29c2df220a&query=x-men&language=it-IT",
@@ -45,14 +45,27 @@ export default function App() {
             </div>
           </div>
         </form>
-        <ul>
+        <ul className="list-group">
           {searchedFilms.map((searchedFilm) => {
             return (
               <>
-                <li>{searchedFilm.title}</li>
-                <li>{searchedFilm.original_title}</li>
-                <li>{searchedFilm.original_language}</li>
-                <li>{searchedFilm.vote_average}</li>
+                <li key={searchedFilm.id} className="list-group-item">
+                  <span className="fw-bold">Titolo: </span>
+                  {searchedFilm.title}
+                </li>
+                <li className="list-group-item">
+                  <span className="fw-bold">Titolo Originale: </span>
+                  {searchedFilm.original_title}
+                </li>
+                <li className="list-group-item">
+                  <span className="fw-bold">Lingua: </span>
+                  {searchedFilm.original_language}
+                </li>
+                <li className="list-group-item">
+                  <span className="fw-bold">Voto: </span>
+                  {searchedFilm.vote_average}
+                </li>
+                <hr />
               </>
             );
           })}
