@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import FilmCard from "./components/filmCard";
 
 export default function App() {
   const [searchInput, setSearchInput] = useState(""); //^ Controllo valore di ricerca per nome
@@ -48,25 +49,14 @@ export default function App() {
         <ul className="list-group">
           {searchedFilms.map((searchedFilm) => {
             return (
-              <div key={searchedFilm.id}>
-                <li className="list-group-item">
-                  <span className="fw-bold">Titolo: </span>
-                  {searchedFilm.title}
-                </li>
-                <li className="list-group-item">
-                  <span className="fw-bold">Titolo Originale: </span>
-                  {searchedFilm.original_title}
-                </li>
-                <li className="list-group-item">
-                  <span className="fw-bold">Lingua: </span>
-                  {searchedFilm.original_language}
-                </li>
-                <li className="list-group-item">
-                  <span className="fw-bold">Voto: </span>
-                  {searchedFilm.vote_average}
-                </li>
-                <hr />
-              </div>
+              <FilmCard
+                key={searchedFilm.id}
+                id={searchedFilm.id}
+                title={searchedFilm.title}
+                original_title={searchedFilm.ioriginal_title}
+                languge={searchedFilm.original_languag}
+                rating={searchedFilm.vote_average}
+              />
             );
           })}
         </ul>
