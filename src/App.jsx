@@ -35,8 +35,8 @@ export default function App() {
   return (
     <>
       <section>
-        <form className="form-control" onSubmit={handleSubmitAndFetchFilms}>
-          <div className="container text-center">
+        <div className="container text-center">
+          <form className="form-control" onSubmit={handleSubmitAndFetchFilms}>
             <h1>CIAOOO</h1>
             <div className="input-group mb-3">
               <input
@@ -53,40 +53,41 @@ export default function App() {
                 Button
               </button>
             </div>
-          </div>
-        </form>
-        <h2>Films</h2>
-        <ul className="list-group">
-          {searchedFilms.map((searchedFilm) => {
-            return (
-              <FilmCard
-                key={searchedFilm.id}
-                id={searchedFilm.id}
-                title={searchedFilm.title}
-                original_title={searchedFilm.original_title}
-                language={searchedFilm.original_language}
-                rating={searchedFilm.vote_average}
-                img={searchedFilm.poster_path}
-              />
-            );
-          })}
-        </ul>
-        <h2>TV</h2>
-        <ul>
-          {searchedDramas.map((searchedDrama) => {
-            return (
-              <DramaCard
-                key={searchedDrama.id}
-                id={searchedDrama.id}
-                name={searchedDrama.name}
-                original_name={searchedDrama.original_name}
-                language={searchedDrama.original_language}
-                rating={searchedDrama.vote_average}
-                img={searchedDrama.poster_path}
-              />
-            );
-          })}
-        </ul>
+          </form>
+
+          <h2>Films</h2>
+          <ul className="list-group text-start">
+            {searchedFilms.map((searchedFilm) => {
+              return (
+                <FilmCard
+                  key={searchedFilm.id}
+                  id={searchedFilm.id}
+                  title={searchedFilm.title}
+                  original_title={searchedFilm.original_title}
+                  language={searchedFilm.original_language}
+                  rating={searchedFilm.vote_average}
+                  img={searchedFilm.poster_path}
+                />
+              );
+            })}
+          </ul>
+          <h2>TV</h2>
+          <ul className="list-group text-start">
+            {searchedDramas.map((searchedDrama) => {
+              return (
+                <DramaCard
+                  key={searchedDrama.id}
+                  id={searchedDrama.id}
+                  name={searchedDrama.name}
+                  original_name={searchedDrama.original_name}
+                  language={searchedDrama.original_language}
+                  rating={searchedDrama.vote_average}
+                  img={searchedDrama.poster_path}
+                />
+              );
+            })}
+          </ul>
+        </div>
       </section>
     </>
   );
