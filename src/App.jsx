@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 
 export default function App() {
@@ -15,7 +16,14 @@ export default function App() {
           className="form-control"
           onSubmit={(e) => {
             e.preventDefault();
-            console.log("ciao");
+            axios
+              .get(
+                "https://api.themoviedb.org/3/search/movie?api_key=a23cfdf36a93b9f03e4cca29c2df220a&query=x-men&language=it-IT",
+              )
+              .then((response) => {
+                setSearchedFilms(response.data.results);
+                console.log(searchedFilms);
+              });
           }}
         >
           <div className="container text-center">
