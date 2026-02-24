@@ -3,6 +3,10 @@ import { useState } from "react";
 export default function App() {
   const [searchInput, setSearchInput] = useState();
 
+  function handleSerachInput(e) {
+    return setSearchInput(e.target.value);
+  }
+
   return (
     <>
       <section>
@@ -11,9 +15,7 @@ export default function App() {
           <div className="input-group mb-3">
             <input
               value={searchInput}
-              onChange={(e) => {
-                setSearchInput(e.target.value);
-              }}
+              onChange={handleSerachInput}
               // ^
               type="text"
               className="form-control"
