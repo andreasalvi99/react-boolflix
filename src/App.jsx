@@ -66,6 +66,7 @@ export default function App() {
                 original_title={searchedFilm.original_title}
                 language={searchedFilm.original_language}
                 rating={searchedFilm.vote_average}
+                img={searchedFilm.poster_path}
               />
             );
           })}
@@ -81,6 +82,7 @@ export default function App() {
                 original_name={searchedDrama.original_name}
                 language={searchedDrama.original_language}
                 rating={searchedDrama.vote_average}
+                img={searchedDrama.poster_path}
               />
             );
           })}

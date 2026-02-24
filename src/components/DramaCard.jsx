@@ -1,10 +1,21 @@
-export default function DramaCard({ name, original_name, language, rating }) {
+export default function DramaCard({
+  name,
+  original_name,
+  language,
+  rating,
+  img,
+}) {
   return (
     <>
       <li>
         <span className="fw-bold">Titolo: </span>
         {name}
       </li>
+      {img && (
+        <li>
+          <img src={`https://image.tmdb.org/t/p/original/${img}`} alt={name} />
+        </li>
+      )}
       <li>
         <span className="fw-bold">Titolo Originale: </span>
         {original_name}
@@ -26,7 +37,7 @@ export default function DramaCard({ name, original_name, language, rating }) {
       </li>
       <li>
         <span className="fw-bold">Voto: </span>
-        {rating}
+        {rating.toFixed(1)}
       </li>
       <hr />
     </>

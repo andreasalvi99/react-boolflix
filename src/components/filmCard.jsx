@@ -1,10 +1,21 @@
-export default function FilmCard({ title, original_title, language, rating }) {
+export default function FilmCard({
+  title,
+  original_title,
+  language,
+  rating,
+  img,
+}) {
   return (
     <>
       <li className="list-group-item">
         <span className="fw-bold">Titolo: </span>
         {title}
       </li>
+      {img && (
+        <li>
+          <img src={`https://image.tmdb.org/t/p/original/${img}`} alt={title} />
+        </li>
+      )}
       <li className="list-group-item">
         <span className="fw-bold">Titolo Originale: </span>
         {original_title}
