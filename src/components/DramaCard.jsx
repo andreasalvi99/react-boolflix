@@ -8,7 +8,7 @@ export default function DramaCard({
 }) {
   return (
     <>
-      <div className="col overflow-auto">
+      <div className="col overflow-auto text-start">
         <div className="card text-bg-dark h-100">
           {img && (
             <img
