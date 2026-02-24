@@ -69,21 +69,6 @@ export default function App() {
               );
             })}
           </div>
-          {/* <ul className="list-group text-start">
-            {searchedFilms.map((searchedFilm) => {
-              return (
-                <FilmCard
-                  key={searchedFilm.id}
-                  id={searchedFilm.id}
-                  title={searchedFilm.title}
-                  original_title={searchedFilm.original_title}
-                  language={searchedFilm.original_language}
-                  rating={searchedFilm.vote_average}
-                  img={searchedFilm.poster_path}
-                />
-              );
-            })}
-          </ul> */}
           <h2>TV</h2>
           <div className="row row-cols-4 g-3">
             {searchedDramas.map((searchedDrama) => {
@@ -98,21 +83,6 @@ export default function App() {
               );
             })}
           </div>
-          {/* <ul className="list-group text-start">
-            {searchedDramas.map((searchedDrama) => {
-              return (
-                <DramaCard
-                  key={searchedDrama.id}
-                  id={searchedDrama.id}
-                  name={searchedDrama.name}
-                  original_name={searchedDrama.original_name}
-                  language={searchedDrama.original_language}
-                  rating={searchedDrama.vote_average}
-                  img={searchedDrama.poster_path}
-                />
-              );
-            })}
-          </ul> */}
         </div>
       </section>
     </>

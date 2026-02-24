@@ -9,11 +9,13 @@ export default function DramaCard({
     <>
       <div className="col">
         <div className="card text-bg-dark">
-          <img
-            src={`https://image.tmdb.org/t/p/original/${img}`}
-            className="card-img"
-            alt="..."
-          />
+          {img && (
+            <img
+              src={`https://image.tmdb.org/t/p/w342/${img}`}
+              className="card-img"
+              alt="..."
+            />
+          )}
           <div className="card-img-overlay">
             <h5 className="card-title">{name}</h5>
             <h5 className="card-title">{original_name}</h5>
@@ -25,19 +27,6 @@ export default function DramaCard({
         </div>
       </div>
       {/* <>
-      <li className="list-group-item">
-        <span className="fw-bold">Titolo: </span>
-        {name}
-      </li>
-      {img && (
-        <li className="list-group-item">
-          <img src={`https://image.tmdb.org/t/p/original/${img}`} alt={name} />
-        </li>
-      )}
-      <li className="list-group-item">
-        <span className="fw-bold">Titolo Originale: </span>
-        {original_name}
-      </li>
       <li className="list-group-item">
         {language === "en" ? (
           <img src="src\assets\img\regno-unito.jpg" className="country-img" />
@@ -53,11 +42,6 @@ export default function DramaCard({
           </>
         )}
       </li>
-      <li className="list-group-item">
-        <span className="fw-bold">Voto: </span>
-        {(rating * 0.5).toFixed(1)}
-      </li>
-      <hr />
     </> */}
     </>
   );
