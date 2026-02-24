@@ -21,6 +21,7 @@ export default function HomePage() {
                   title={searchedFilm.title}
                   original_title={searchedFilm.original_title}
                   rating={searchedFilm.vote_average}
+                  overview={searchedFilm.overview}
                 />
               );
             })}
@@ -35,6 +36,7 @@ export default function HomePage() {
                   name={searchedDrama.name}
                   original_name={searchedDrama.original_name}
                   rating={searchedDrama.vote_average}
+                  overview={searchedDrama.overview}
                 />
               );
             })}

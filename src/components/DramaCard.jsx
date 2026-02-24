@@ -4,15 +4,16 @@ export default function DramaCard({
   language,
   rating,
   img,
+  overview,
 }) {
   return (
     <>
-      <div className="col">
-        <div className="card text-bg-dark">
+      <div className="col overflow-hidden">
+        <div className="card text-bg-dark h-100">
           {img && (
             <img
               src={`https://image.tmdb.org/t/p/w342/${img}`}
-              className="card-img"
+              className="card-img object-fit-cover h-100"
               alt={name}
             />
           )}
@@ -23,6 +24,12 @@ export default function DramaCard({
               <span className="fw-bold">Voto: </span>
               {(rating * 0.5).toFixed(1)}
             </p>
+            {overview && (
+              <p className="card-text">
+                <span className="fw-bold">overview: </span>
+                {overview}
+              </p>
+            )}
           </div>
         </div>
       </div>
