@@ -37,7 +37,6 @@ export default function App() {
       <section>
         <div className="container text-center">
           <form className="form-control" onSubmit={handleSubmitAndFetchFilms}>
-            <h1>CIAOOO</h1>
             <div className="input-group mb-3">
               <input
                 value={searchInput}
@@ -56,7 +55,7 @@ export default function App() {
           </form>
 
           <h2>Films</h2>
-          <div className="row row-cols-4 g-3">
+          <div className="row row-cols-6 g-3">
             {searchedFilms.map((searchedFilm) => {
               return (
                 <FilmCard
@@ -70,7 +69,7 @@ export default function App() {
             })}
           </div>
           <h2>TV</h2>
-          <div className="row row-cols-4 g-3">
+          <div className="row row-cols-6 g-3">
             {searchedDramas.map((searchedDrama) => {
               return (
                 <DramaCard
