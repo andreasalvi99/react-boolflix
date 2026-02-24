@@ -8,7 +8,7 @@ export default function FilmCard({
 }) {
   return (
     <>
-      <div className="col overflow-hidden">
+      <div className="col overflow-auto">
         <div className="card text-bg-dark h-100">
           {img && (
             <img

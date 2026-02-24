@@ -14,7 +14,7 @@ export default function HomePage() {
           <h2 className="my-5 text-start">
             <span>Films</span>
           </h2>
-          <div className="row row-cols-6 g-3">
+          <div className="row row-cols-3 g-3">
             {searchedFilms.map((searchedFilm) => {
               return (
                 <FilmCard
@@ -31,7 +31,7 @@ export default function HomePage() {
           <h2 className="my-5 text-start">
             <span>TV Series</span>
           </h2>
-          <div className="row row-cols-6 g-3 my-5">
+          <div className="row row-cols-3 g-3 my-5">
             {searchedDramas.map((searchedDrama) => {
               return (
                 <DramaCard
