@@ -45,6 +45,18 @@ export default function App() {
             </div>
           </div>
         </form>
+        <ul>
+          {searchedFilms.map((searchedFilm) => {
+            return (
+              <>
+                <li>{searchedFilm.title}</li>
+                <li>{searchedFilm.original_title}</li>
+                <li>{searchedFilm.original_language}</li>
+                <li>{searchedFilm.vote_average}</li>
+              </>
+            );
+          })}
+        </ul>
       </section>
     </>
   );
