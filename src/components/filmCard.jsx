@@ -11,9 +11,12 @@ export default function FilmCard({ title, original_title, language, rating }) {
       </li>
       <li className="list-group-item">
         {language === "en" ? (
-          <img src="src\assets\img\regno-unito.jpg" />
+          <img src="src\assets\img\regno-unito.jpg" className="country-img" />
         ) : language === "it" ? (
-          <img src="src\assets\img\Flag_of_Italy.svg.webp" />
+          <img
+            src="src\assets\img\Flag_of_Italy.svg.webp"
+            className="country-img"
+          />
         ) : (
           <>
             <span className="fw-bold">Lingua: </span>
