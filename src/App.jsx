@@ -53,8 +53,8 @@ export default function App() {
                 key={searchedFilm.id}
                 id={searchedFilm.id}
                 title={searchedFilm.title}
-                original_title={searchedFilm.ioriginal_title}
-                languge={searchedFilm.original_languag}
+                original_title={searchedFilm.original_title}
+                language={searchedFilm.original_language}
                 rating={searchedFilm.vote_average}
               />
             );
