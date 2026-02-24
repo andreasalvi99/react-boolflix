@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function App() {
-  const [searchInput, setSearchInput] = useState(); //^ Controllo valore di ricerca per nome
+  const [searchInput, setSearchInput] = useState(""); //^ Controllo valore di ricerca per nome
   const [searchedFilms, setSearchedFilms] = useState([]); //^ Stato dell'array dei film cercati, all'inizio è vuoto
 
   function handleSerachInput(e) {
@@ -48,8 +48,8 @@ export default function App() {
         <ul className="list-group">
           {searchedFilms.map((searchedFilm) => {
             return (
-              <>
-                <li key={searchedFilm.id} className="list-group-item">
+              <div key={searchedFilm.id}>
+                <li className="list-group-item">
                   <span className="fw-bold">Titolo: </span>
                   {searchedFilm.title}
                 </li>
@@ -66,7 +66,7 @@ export default function App() {
                   {searchedFilm.vote_average}
                 </li>
                 <hr />
-              </>
+              </div>
             );
           })}
         </ul>
