@@ -5,3 +5,13 @@
   height: 30px;
   width: 50px;
 }
+
+.card-img-overlay {
+  display: none;
+}
+
+.card:hover .card-img-overlay {
+  display: block;
+  background-color: black;
+  opacity: 0.8;
+}

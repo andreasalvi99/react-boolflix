@@ -13,7 +13,7 @@ export default function FilmCard({
             <img
               src={`https://image.tmdb.org/t/p/w342/${img}`}
               className="card-img"
-              alt="..."
+              alt={title}
             />
           )}
           <div className="card-img-overlay">
@@ -26,9 +26,7 @@ export default function FilmCard({
           </div>
         </div>
       </div>
-
       {/* // <>
-    
     //   <li className="list-group-item">
     //     {language === "en" ? ( */}
       {/* //       <img src="src\assets\img\regno-unito.jpg" className="country-img" />
@@ -44,7 +42,6 @@ export default function FilmCard({
     //       </>
     //     )}
     //   </li> */}
-
       {/* </>  */}
     </>
   );

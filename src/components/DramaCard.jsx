@@ -13,7 +13,7 @@ export default function DramaCard({
             <img
               src={`https://image.tmdb.org/t/p/w342/${img}`}
               className="card-img"
-              alt="..."
+              alt={name}
             />
           )}
           <div className="card-img-overlay">
