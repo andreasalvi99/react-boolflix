@@ -37,7 +37,7 @@ export default function DramaCard({
       </li>
       <li>
         <span className="fw-bold">Voto: </span>
-        {rating.toFixed(1)}
+        {(rating * 0.5).toFixed(1)}
       </li>
       <hr />
     </>

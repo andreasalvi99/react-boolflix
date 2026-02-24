@@ -37,7 +37,7 @@ export default function FilmCard({
       </li>
       <li className="list-group-item">
         <span className="fw-bold">Voto: </span>
-        {rating.toFixed(1)}
+        {(rating * 0.5).toFixed(1)}
       </li>
       <hr />
     </>
