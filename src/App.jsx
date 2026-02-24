@@ -9,23 +9,23 @@ export default function App() {
     return setSearchInput(e.target.value); //^ Funzione per settare lo stato sul valore inserito dall'utente
   }
 
+  function handleSubmitAndFetchFilms(e) {
+    return (
+      e.preventDefault(),
+      axios
+        .get(
+          "https://api.themoviedb.org/3/search/movie?api_key=a23cfdf36a93b9f03e4cca29c2df220a&query=x-men&language=it-IT",
+        )
+        .then((response) => {
+          setSearchedFilms(response.data.results);
+        })
+    );
+  }
+
   return (
     <>
       <section>
-        <form
-          className="form-control"
-          onSubmit={(e) => {
-            e.preventDefault();
-            axios
-              .get(
-                "https://api.themoviedb.org/3/search/movie?api_key=a23cfdf36a93b9f03e4cca29c2df220a&query=x-men&language=it-IT",
-              )
-              .then((response) => {
-                setSearchedFilms(response.data.results);
-                console.log(searchedFilms);
-              });
-          }}
-        >
+        <form className="form-control" onSubmit={handleSubmitAndFetchFilms}>
           <div className="container text-center">
             <h1>CIAOOO</h1>
             <div className="input-group mb-3">
