@@ -5,22 +5,30 @@ export default function Header() {
     useSearch();
 
   return (
-    <form className="form-control" onSubmit={handleSubmitAndFetchFilms}>
-      <div className="input-group mb-3">
-        <input
-          value={searchInput}
-          onChange={handleSerachInput}
-          //^
-          type="text"
-          className="form-control"
-          placeholder="Recipient’s username"
-          aria-label="Recipient’s username"
-          aria-describedby="button-addon2"
-        />
-        <button className="btn btn-outline-secondary" type="submit">
-          Button
-        </button>
+    <nav className="navbar bg-dark sticky-top">
+      <div className="container-fluid">
+        <a className="navbar-brand">
+          <span className="logo">BOOLFLIX</span>
+        </a>
+        <form
+          className="d-flex"
+          role="search"
+          onSubmit={handleSubmitAndFetchFilms}
+        >
+          <input
+            value={searchInput}
+            onChange={handleSerachInput}
+            //^
+            className="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button className="btn btn-outline-danger" type="submit">
+            Search
+          </button>
+        </form>
       </div>
-    </form>
+    </nav>
   );
 }
