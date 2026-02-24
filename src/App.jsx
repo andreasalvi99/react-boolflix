@@ -31,12 +31,7 @@ export default function App() {
                 aria-label="Recipient’s username"
                 aria-describedby="button-addon2"
               />
-              <button
-                //^
-                className="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
+              <button className="btn btn-outline-secondary" type="submit">
                 Button
               </button>
             </div>
