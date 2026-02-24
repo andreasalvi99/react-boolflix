@@ -10,8 +10,10 @@ export default function HomePage() {
     <>
       <Header />
       <section>
-        <div className="container text-center">
-          <h2>Films</h2>
+        <div className="container text-center my-5">
+          <h2 className="my-5 text-start">
+            <span>Films</span>
+          </h2>
           <div className="row row-cols-6 g-3">
             {searchedFilms.map((searchedFilm) => {
               return (
@@ -26,8 +28,10 @@ export default function HomePage() {
               );
             })}
           </div>
-          <h2>TV</h2>
-          <div className="row row-cols-6 g-3">
+          <h2 className="my-5 text-start">
+            <span>TV Series</span>
+          </h2>
+          <div className="row row-cols-6 g-3 my-5">
             {searchedDramas.map((searchedDrama) => {
               return (
                 <DramaCard
