@@ -1,37 +1,15 @@
 import { useSearch } from "../contexts/SearchContext";
 import FilmCard from "../components/FilmCard";
 import DramaCard from "../components/DramaCard";
+import Header from "../components/Header";
 
 export default function HomePage() {
-  const {
-    handleSubmitAndFetchFilms,
-    searchInput,
-    handleSerachInput,
-    searchedFilms,
-    searchedDramas,
-  } = useSearch();
+  const { searchedFilms, searchedDramas } = useSearch();
 
   return (
     <section>
       <div className="container text-center">
-        <form className="form-control" onSubmit={handleSubmitAndFetchFilms}>
-          <div className="input-group mb-3">
-            <input
-              value={searchInput}
-              onChange={handleSerachInput}
-              //^
-              type="text"
-              className="form-control"
-              placeholder="Recipient’s username"
-              aria-label="Recipient’s username"
-              aria-describedby="button-addon2"
-            />
-            <button className="btn btn-outline-secondary" type="submit">
-              Button
-            </button>
-          </div>
-        </form>
-
+        <Header />
         <h2>Films</h2>
         <div className="row row-cols-6 g-3">
           {searchedFilms.map((searchedFilm) => {

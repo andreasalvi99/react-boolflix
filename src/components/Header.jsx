@@ -1,4 +1,9 @@
+import { useSearch } from "../contexts/SearchContext";
+
 export default function Header() {
+  const { handleSubmitAndFetchFilms, handleSerachInput, searchInput } =
+    useSearch();
+
   return (
     <form className="form-control" onSubmit={handleSubmitAndFetchFilms}>
       <div className="input-group mb-3">
