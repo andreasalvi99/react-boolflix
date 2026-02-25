@@ -4,12 +4,18 @@ import DramaCard from "../components/DramaCard";
 import Header from "../components/Header";
 
 export default function HomePage() {
-  const { searchedFilms, searchedDramas } = useSearch();
+  const { searchedFilms, searchedDramas, isLoading } = useSearch();
 
   return (
     <>
       <Header />
-      {searchedFilms.length > 0 || searchedDramas.length > 0 ? (
+      {isLoading === true ? (
+        <section className="d-flex justify-content-center align-items-center">
+          <div className="spinner-grow mt-5" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </section>
+      ) : searchedFilms.length > 0 || searchedDramas.length > 0 ? (
         <>
           <section>
             <div className="container text-center my-5">
