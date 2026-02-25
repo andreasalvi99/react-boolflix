@@ -19,8 +19,6 @@ function SearchBarProvider({ children }) {
   function handleSubmitAndFetchFilms(e) {
     e.preventDefault(); //^ Funzione per prevenire il refresh ed effettuare chiamata all'invio del form
     setIsLoading(true);
-    console.log(import.meta.env.VITE_API_KEY);
-    console.log("API KEY:", apiKey);
 
     const movies = axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchInput}&language=it-IT`,
