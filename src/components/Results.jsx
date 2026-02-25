@@ -1,3 +1,4 @@
+import { useSearch } from "../contexts/SearchContext";
 import Header from "./Header";
 
 export default function Results() {
