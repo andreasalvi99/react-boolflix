@@ -5,14 +5,13 @@ import Results from "../components/Results";
 import NoResults from "../components/NoResults";
 
 export default function HomePage() {
-  const { searchedFilms, searchedDramas, isLoading, isSearching, searchInput } =
-    useSearch();
+  const { searchedFilms, searchedDramas, isLoading, isSearching } = useSearch();
 
   if (
     isSearching &&
     searchedFilms.length === 0 &&
-    searchedDramas.length === 0 &&
-    searchInput !== ""
+    searchedDramas.length === 0
+    // searchInput !== ""
   ) {
     return <NoResults />; //^ Se non ci sono risultati
   }
