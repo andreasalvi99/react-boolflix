@@ -27,12 +27,12 @@ export default function HomePage() {
   // }
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading />; //^ Se sta caricando i risultati mostro Loading
   }
 
   if (searchedFilms.length === 0 || searchedDramas.length === 0) {
-    return <Welcome />;
+    return <Welcome />; //^ Se non è stata ancora effettuata una chiamata mostro la pagina base
   }
 
-  return <Results />;
+  return <Results />; //^ Dopo la chiamata mostro Results
 }
