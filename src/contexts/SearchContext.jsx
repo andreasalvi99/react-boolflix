@@ -44,9 +44,6 @@ function SearchBarProvider({ children }) {
         handleSerachInput,
         handleSubmitAndFetchFilms,
         searchInput,
-        setSearchInput,
-        setSearchedFilms,
-        setSearchedDramas,
         isLoading,
       }}
     >
