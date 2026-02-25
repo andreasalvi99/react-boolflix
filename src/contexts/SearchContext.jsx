@@ -10,6 +10,8 @@ function SearchBarProvider({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
+  const apiKey = import.meta.env.VITE_API_KEY;
+
   function handleSerachInput(e) {
     return setSearchInput(e.target.value); //^ Funzione per settare lo stato sul valore inserito dall'utente
   }
@@ -17,13 +19,15 @@ function SearchBarProvider({ children }) {
   function handleSubmitAndFetchFilms(e) {
     e.preventDefault(); //^ Funzione per prevenire il refresh ed effettuare chiamata all'invio del form
     setIsLoading(true);
+    console.log(import.meta.env.VITE_API_KEY);
+    console.log("API KEY:", apiKey);
 
     const movies = axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=a23cfdf36a93b9f03e4cca29c2df220a&query=${searchInput}&language=it-IT`,
+      `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchInput}&language=it-IT`,
     );
 
     const dramas = axios.get(
-      `https://api.themoviedb.org/3/search/tv?api_key=a23cfdf36a93b9f03e4cca29c2df220a&query=${searchInput}&language=it-IT`,
+      `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${searchInput}&language=it-IT`,
     );
 
     Promise.all([movies, dramas])
