@@ -36,17 +36,17 @@ function SearchBarProvider({ children }) {
     );
   }
 
+  const conextValue = {
+    searchedFilms,
+    searchedDramas,
+    handleSerachInput,
+    handleSubmitAndFetchFilms,
+    searchInput,
+    isLoading,
+  };
+
   return (
-    <SearchContext.Provider
-      value={{
-        searchedFilms,
-        searchedDramas,
-        handleSerachInput,
-        handleSubmitAndFetchFilms,
-        searchInput,
-        isLoading,
-      }}
-    >
+    <SearchContext.Provider value={conextValue}>
       {children}
     </SearchContext.Provider>
   );

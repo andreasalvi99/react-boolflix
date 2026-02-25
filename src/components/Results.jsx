@@ -1,4 +1,6 @@
 import { useSearch } from "../contexts/SearchContext";
+import DramaCard from "./DramaCard";
+import FilmCard from "./FilmCard";
 import Header from "./Header";
 
 export default function Results() {
