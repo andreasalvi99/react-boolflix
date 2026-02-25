@@ -38,7 +38,7 @@ h2 > span {
 }
 
 #empty-state {
-  height: calc(100vh - 55px);
+  height: calc(100vh - 71px);
 }
 
 #empty-state > div {

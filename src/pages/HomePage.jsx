@@ -2,6 +2,7 @@ import { useSearch } from "../contexts/SearchContext";
 import FilmCard from "../components/FilmCard";
 import DramaCard from "../components/DramaCard";
 import Header from "../components/Header";
+import Loading from "../components/Loading";
 
 export default function HomePage() {
   const { searchedFilms, searchedDramas, isLoading, searchInput } = useSearch();
@@ -27,16 +28,7 @@ export default function HomePage() {
   // }
 
   if (isLoading) {
-    return (
-      <>
-        <Header />
-        <section className="d-flex justify-content-center align-items-center">
-          <div className="spinner-grow mt-5" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </section>
-      </>
-    );
+    return <Loading />;
   }
 
   if (searchedFilms.length === 0 || searchedDramas.length === 0) {
