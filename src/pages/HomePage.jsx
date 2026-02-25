@@ -11,7 +11,6 @@ export default function HomePage() {
     isSearching &&
     searchedFilms.length === 0 &&
     searchedDramas.length === 0
-    // searchInput !== ""
   ) {
     return <NoResults />; //^ Se non ci sono risultati
   }
