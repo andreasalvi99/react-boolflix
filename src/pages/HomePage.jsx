@@ -1,7 +1,4 @@
 import { useSearch } from "../contexts/SearchContext";
-import FilmCard from "../components/FilmCard";
-import DramaCard from "../components/DramaCard";
-import Header from "../components/Header";
 import Loading from "../components/Loading";
 import Welcome from "../components/Welcome";
 import Results from "../components/Results";
