@@ -7,8 +7,10 @@ export default function HomePage() {
   const { searchedFilms, searchedDramas, isLoading, searchInput } = useSearch();
 
   // if (
-  //   !searchedFilms.includes(searchInput) &&
-  //   !searchedDramas.includes(searchInput)
+  //   !isLoading &&
+  //   searchedFilms.length === 0 &&
+  //   searchedDramas.length === 0 &&
+  //   searchInput !== ""
   // ) {
   //   return (
   //     <>
